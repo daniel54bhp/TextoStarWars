@@ -24,7 +24,7 @@
             position: absolute;
             width: 100%;
             text-align: center;
-            top: 5%;
+            top: 10%;
         }
 
         .title {
@@ -34,6 +34,19 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 900;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #FFD700;
+            background-color: transparent;
+            border: 2px solid #FFD700;
+            padding: 10px 20px;
+            cursor: pointer;
         }
 
         .crawl {
@@ -61,16 +74,26 @@
                 transform: rotateX(25deg) translateZ(-1500px);
             }
         }
+    
+
+        @keyframes crawl {
+            0% {
+                top: 100vh;
+                transform: rotateX(25deg) translateZ(0);
+            }
+            100% {
+                top: -200vh;
+                transform: rotateX(25deg) translateZ(-1500px);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <audio autoplay loop>
-        <source src="sonido.ogg" type="audio/ogg">
-        Tu navegador no soporta la etiqueta de audio.
-    </audio>
+    <audio id="audio-player" src="sonido.ogg" loop></audio>
     
     <div class="star-wars">
+        <button class="play-button" onclick="playAudio()">Play</button>
         <div class="title-container">
             <div class="title">3 Años de conocernos...</div>
         </div>
@@ -98,5 +121,11 @@
             </p>      
         </div>
     </div>
+    <script>
+        function playAudio() {
+            var audioPlayer = document.getElementById("audio-player");
+            audioPlayer.play();
+        }
+    </script>
 </body>
 </html>
