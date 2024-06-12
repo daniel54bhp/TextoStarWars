@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Años ya...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: black;
+            overflow: hidden;
+        }
+
+        .star-wars {
+            position: relative;
+            height: 100vh;
+            perspective: 600px;
+            overflow: hidden;
+        }
+
+        .title-container {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 5%;
+        }
+
+        .title {
+            font-size: 40px;
+            color: transparent;
+            -webkit-text-stroke: 1px #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+        }
+
+        .crawl {
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            animation: crawl 60s linear infinite;
+        }
+
+        .crawl p {
+            font-size: 24px;
+            font-weight: 900;
+            text-align: justify;
+            color: #FFD700;
+            line-height: 1.5;
+        }
+
+        @keyframes crawl {
+            0% {
+                top: 100vh;
+                transform: rotateX(25deg) translateZ(0);
+            }
+            100% {
+                top: -200vh;
+                transform: rotateX(25deg) translateZ(-1500px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <audio autoplay loop>
+        <source src="sonido.ogg" type="audio/ogg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+    
+    <div class="star-wars">
+        <div class="title-container">
+            <div class="title">3 Años de conocernos...</div>
+        </div>
+        <div class="crawl">
+            <p>
+                Hace mucho tiempo, en un lugar no tan lejano...
+            </p>
+            <p>
+                Dos personas se encontraron en el caos diario de la vida, y desde entonces, todo ha sido una aventura.
+            </p>
+            <p>
+                Como dos astronautas en una misión infinita, hemos navegado por los retos de la vida.
+            </p>
+            <p>
+                Eres mi compañera de travesuras, la que siempre sabe cómo hacerme reír en medio del caos. Los dos hemos pasado varios momentos hermosos juntos.
+            </p>
+            <p>
+                Prometo seguir siendo tu copiloto en esta nave llamada vida, explorando juntos cada rincón del universo, enfrentando problemas apoyandote en todo y seguir amandote.
+            </p>
+            <p>
+                Que nuestro amor siga, trascienda las barreras y más. Porque en este universo y en cualquier otro, siempre seremos el mejor equipo los dos juntos.
+            </p> 
+            <p>
+                ❤️ APJB ❤️
+            </p>      
+        </div>
+    </div>
+</body>
+</html>
